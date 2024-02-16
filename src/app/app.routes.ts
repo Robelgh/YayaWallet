@@ -9,11 +9,12 @@ export const routes: Routes = [
 		path: "login",
 		component: LoginComponent,
 	},
- 
+  
     {
 		path: "dashboard",
 		loadChildren: () =>
-			import("./user/user.module").then((m) => m.UserModule)
+			import("./user/user.module").then((m) => m.UserModule),
+            canMatch: [authGuardGuard],
 	},
  
 ];

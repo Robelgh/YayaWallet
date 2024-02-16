@@ -1,1 +1,4 @@
 <user-side-bar [isExpanded]="sidebarExpanded" (toggleSidebar)="sidebarExpanded = !sidebarExpanded"></user-side-bar>
+<div class="user-route" [ngClass]="{ 'sidebarExpanded' : sidebarExpanded}">
+	<router-outlet></router-outlet>
+</div>
